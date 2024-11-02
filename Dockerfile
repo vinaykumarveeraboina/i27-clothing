@@ -11,6 +11,9 @@ WORKDIR $SRC_DIR
 # Copy the current directory content to /opt/i27 
 COPY . $SRC_DIR
 
+# Installing all the dependencied
+RUN npm install 
+
 # Expose container port 3000
 EXPOSE 3000
 

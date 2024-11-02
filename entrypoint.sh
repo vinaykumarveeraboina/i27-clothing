@@ -1,5 +1,5 @@
 # Script
-
+#!/bin/bash
 ENVIRONMENT="${1:-dev}"
 
 case "$ENVIRONMENT" in 
