@@ -11,7 +11,7 @@ WORKDIR $SRC_DIR
 # Copy the current directory content to /opt/i27 
 COPY . $SRC_DIR
 
-# Installing all the dependencied
+# Installing all the dependencies
 RUN npm install 
 
 # Expose container port 3000
@@ -19,6 +19,7 @@ EXPOSE 3000
 
 COPY entrypoint.sh /entrypoint.sh
 
-RUN chmod +x /entrypoint.sh
+RUN chmod +x entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
+# ENTRYPOINT ["/bin/bash", "-c", "echo hello"]
