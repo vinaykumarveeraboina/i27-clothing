@@ -19,4 +19,8 @@ case "$ENVIRONMENT" in
         echo "Starting the application in prod mode"
         npm run start:prod
         ;;
+    *)
+        echo "Invalid environment specified, Valid options are 'dev', 'test', 'prod'"
+        exit 1
+        ;;
 esac

@@ -1,25 +1,26 @@
 FROM node:14
-
 ARG SRC_DIR=/opt/i27
 
-# Which will be created in the container
-RUN mkdir -p $SRC_DIR
+# Create directory inside the container
+RUN mkdir $SRC_DIR
 
-# This is the work directory
+# Set the working directory inside the container
 WORKDIR $SRC_DIR
 
-# Copy the current directory content to /opt/i27 
+# Copy the current content to /opt/i27 directory, this is our home directory
 COPY . $SRC_DIR
 
-# Installing all the dependencies
-RUN npm install 
+# Install Node.js dependencies
+RUN npm install
 
-# Expose container port 3000
+# Expose the port
 EXPOSE 3000
 
+# Copy the entrypoint script
 COPY entrypoint.sh /entrypoint.sh
 
-RUN chmod +x entrypoint.sh
+# Make the script executable
+RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["./entrypoint.sh"]
-# ENTRYPOINT ["/bin/bash", "-c", "echo hello"]
+# Use CMD instead of ENTRYPOINT to start the application
+CMD ["/entrypoint.sh"]
