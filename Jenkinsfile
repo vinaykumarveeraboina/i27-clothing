@@ -31,29 +31,29 @@ pipeline {
                 }
             } 
         }
-        stage ("DeploytoDev") {
-            steps {
-                script {
-                    k8sdeploy //
-                }
-            }
-        }
-        stage("Deploytostage")
-        {
-            steps {
-                script {
-                    k8sdeploy //
-                }
-            }
-        }
-        stage("DeploytoProd")
-        {
-            steps {
-                script {
-                    k8sdeploy //
-                }
-            }
-        }
+        // stage ("DeploytoDev") {
+        //     steps {
+        //         script {
+        //             k8sdeploy //
+        //         }
+        //     }
+        // }
+        // stage("Deploytostage")
+        // {
+        //     steps {
+        //         script {
+        //             k8sdeploy //
+        //         }
+        //     }
+        // }
+        // stage("DeploytoProd")
+        // {
+        //     steps {
+        //         script {
+        //             k8sdeploy //
+        //         }
+        //     }
+        // }
     }
 }
 
