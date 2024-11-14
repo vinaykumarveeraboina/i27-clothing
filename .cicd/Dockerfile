@@ -8,7 +8,7 @@ RUN mkdir $SRC_DIR
 WORKDIR $SRC_DIR
 
 # Copy the current content to /opt/i27 directory, this is our home directory
-COPY . $SRC_DIR
+COPY ../. $SRC_DIR
 
 # Install Node.js dependencies
 RUN npm install
