@@ -1,0 +1,8 @@
+fullname : i27-clothing-tst
+name : i27-clothing-tst
+replicas : 
+ default: 1
+image :
+ name: i27project.jfrog.io/boutique-docker/clothing
+ tag: random
+targetPort : 3000 
