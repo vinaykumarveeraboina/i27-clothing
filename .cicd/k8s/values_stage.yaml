@@ -6,3 +6,5 @@ image :
  name: i27project.jfrog.io/boutique-docker/clothing
  tag: random
 targetPort : 3000 
+nodeport : 30004
+env: stage
