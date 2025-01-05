@@ -1,7 +1,7 @@
 // Call the Shared Lib
 
 @Library("com.i27academy.slb@main") _
- nodejfrogPipeline(
+ nodeingressPipeline(
      appName: 'clothing'
 )
 
